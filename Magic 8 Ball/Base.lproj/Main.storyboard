@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11521.1" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11517.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Magic_8_Ball" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="magic" translatesAutoresizingMaskIntoConstraints="NO" id="Imn-fJ-o03"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hRl-Ve-q7w">
+                                <frame key="frameInset" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.081778626448880676" green="1" blue="0.99623093822725739" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="ball1" translatesAutoresizingMaskIntoConstraints="NO" id="Auj-wp-CB6">
+                                <frame key="frameInset" minX="67" minY="179" width="240" height="275"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EiB-Bn-RCB">
+                                <frame key="frameInset" minX="126" minY="488" width="123" height="38"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="40"/>
+                                <state key="normal" title="Ask">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="askButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AFv-C1-fgF"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ask Me Anything" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mu5-XW-OLx">
+                                <frame key="frameInset" minX="33" minY="51" width="308" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="40"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="EiB-Bn-RCB" secondAttribute="trailing" constant="110" id="3KI-J6-Kc0"/>
+                            <constraint firstItem="EiB-Bn-RCB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="110" id="5RX-Aa-TQY"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Imn-fJ-o03" secondAttribute="bottom" id="6Tb-Ue-cnu"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="EiB-Bn-RCB" secondAttribute="bottom" constant="141" id="7gd-pd-dQH"/>
+                            <constraint firstItem="Imn-fJ-o03" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Fbl-yB-E4K"/>
+                            <constraint firstItem="Auj-wp-CB6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="51" id="NcA-Dc-TmS"/>
+                            <constraint firstItem="Imn-fJ-o03" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="RXd-g5-Rr1"/>
+                            <constraint firstItem="Auj-wp-CB6" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="159" id="eOW-fa-kwN"/>
+                            <constraint firstItem="EiB-Bn-RCB" firstAttribute="top" secondItem="Auj-wp-CB6" secondAttribute="bottom" constant="34" id="jdL-th-Tbf"/>
+                            <constraint firstAttribute="trailing" secondItem="Imn-fJ-o03" secondAttribute="trailing" id="kVp-bj-np6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Auj-wp-CB6" secondAttribute="trailing" constant="51" id="t0q-0U-ALp"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="Auj-wp-CB6" id="f1p-WX-iHM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="122.78860569715144"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ball1" width="460" height="412"/>
+        <image name="magic" width="5016" height="3344"/>
+    </resources>
+</document>
